@@ -48,9 +48,9 @@ public class Reservation {
     
     @Column(name = "late_fee", precision = 10, scale = 2)
     private BigDecimal lateFee = BigDecimal.ZERO;
-    
+
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "VARCHAR(20)")
     private ReservationStatus status = ReservationStatus.ACTIVE;
     
     @Column(name = "created_at", nullable = false, updatable = false)
